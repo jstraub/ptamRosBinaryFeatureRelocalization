@@ -27,15 +27,15 @@ Installation of necessary 3rd-party Code
 ----------------------------------------
 
 - install gvars3, libcvd and TooN (as described in PTAM install) on the same folder level as ptamBriefRelocalizeStandalone i.e.:
-  ./
-  ./3rdparty/gvars3/
-  ./3rdparty/libcvd/
-  ./3rdparty/TooN/
-  ./ptamBriefRelocalizeStandalone/
-  it is sufficient to install them in place
--- gvars3: http://www.edwardrosten.com/cvd/gvars3.html
--- libcvd: http://www.edwardrosten.com/cvd/index.html
--- TooN: http://www.edwardrosten.com/cvd/toon.html
+  > ./
+  > ./3rdparty/gvars3/
+  > ./3rdparty/libcvd/
+  > ./3rdparty/TooN/
+  > ./ptamBriefRelocalizeStandalone/
+  > it is sufficient to install them in place
+- gvars3: http://www.edwardrosten.com/cvd/gvars3.html
+- libcvd: http://www.edwardrosten.com/cvd/index.html
+- TooN: http://www.edwardrosten.com/cvd/toon.html
 
 - the code should work with ros fuerte and groovy (you need to change the include and link directories in the CMakeLists.txt if you want to use the older ros fuerte)
 
