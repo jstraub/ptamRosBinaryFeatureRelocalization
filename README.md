@@ -1,11 +1,11 @@
 PTAM-GPL with ROS Integration and Binary Feature Relocalization
 ===============================================================
 
-This project adds two features to the original PTAM-GPL release:
+This project adds two features to the original PTAM-GPL (https://github.com/Oxford-PTAM/PTAM-GPL.git) release:
 - integration of a fast relocalization mechanism based on binary features as described in the following paper:
-  Fast Relocalization For Visual Odometry Using Binary Features (Julian Straub, Sebastian Hilsenbeck, Georg Schroth, Robert Huitl, Andreas Möller, Eckehard Steinbach), In IEEE International Conference on Image Processing (ICIP), 2013. 
+  *Fast Relocalization For Visual Odometry Using Binary Features* (Julian Straub, Sebastian Hilsenbeck, Georg Schroth, Robert Huitl, Andreas Möller, Eckehard Steinbach), In IEEE International Conference on Image Processing (ICIP), 2013. 
   Download from http://www.jstraub.de/download/straub2013fastRelocalization.pdf
-- integration with the Robot Operating System (ROS) http://www.ros.org/. This among other features allows replaying of recorded videos as rosbags.
+- *integration with the Robot Operating System (ROS)* http://www.ros.org/. This among other features allows replaying of recorded videos as rosbags.
 
 What is PTAM
 ------------
@@ -26,12 +26,17 @@ Installation of Necessary 3rd-party Code
 
 - install gvars3, libcvd and TooN (as described in PTAM install) on the same folder level as ptamBriefRelocalizeStandalone i.e.:
 
-  > ./
-  > ./3rdparty/gvars3/
-  > ./3rdparty/libcvd/
-  > ./3rdparty/TooN/
-  > ./ptamBriefRelocalizeStandalone/
-  > it is sufficient to install them in place
+   ./
+
+   ./3rdparty/gvars3/
+
+   ./3rdparty/libcvd/
+
+   ./3rdparty/TooN/
+
+   ./ptamBriefRelocalizeStandalone/
+
+   it is sufficient to install them in place
 
 - gvars3: http://www.edwardrosten.com/cvd/gvars3.html
 - libcvd: http://www.edwardrosten.com/cvd/index.html
