@@ -1,0 +1,16 @@
+<!-- ROS Launch File for IMU and Camera -->
+
+<launch>
+  <!-- Publish the camera topics -->
+  <node name="cam" pkg="camera1394" type="camera1394_node">
+  <param name="use_ros_time" value="true"/>
+  <param name="frame_rate" value="60.0"/>
+  <!-- valid frame rates are 7.5, 15.0, 30.0 and 60.0 fps -->
+  </node>
+
+  <!-- Publish the IMU topics -->
+  <node name="imu" pkg="lse_xsens_mti" type="mti_node"/>
+
+  <!-- Subscribe to /camera/image_raw -->
+  <node name="image_view" pkg="image_view" type="image_view" args="image:=/camera/image_raw" />
+</launch>

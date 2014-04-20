@@ -1,0 +1,35 @@
+NOTES FOR COMPILATION of PTAM (June 27, 2011, ga69qel)
+
+- check out a newer version of libgvc than specified in the readme (2010 instead of 2009)
+- add some missing imports in the source/header files (as specified by the error messages) -- mostly <stdio.h>
+- in PTAM makefile, change MY_CUSTOM_LINK_PATH to /usr/local/lib
+- Type: sudo su and enter: echo "/usr/local/lib" >> /etc/ld.so.conf.d/loc_lib.conf
+- /sbin/ldconfig
+--> This ensures that the libraries in /usr/local/lib are found
+- In the makefile, specifiy VideoSource_Linux_V4L for the Logitech Quickcam
+
+Now all packages including PTAM itself compile.
+
+Calibrate camera with ./CameraCalibration
+Start recognition with ./PTAM
+
+NOTES FOR COMPILATION of PTAMM (June 27, 2011, ga69qel)
+- in PTAM makefile, change MY_CUSTOM_LINK_PATH to /usr/local/lib and specify VideoSource_Linux_V4L for the Logitech Quickcam
+- do everything as stated in the manual
+
+
+NOTES FOR IMPORTING THE PROJECT TO ECLIPSE
+- File->Import
+- Existing Code as Makefile Project
+- Select Linux GCC
+
+How wide is wide-angle? Readme says, the first parameter in camera.cfg is the normalized focal length and fx=0.57 for their system.
+Up to fx<=1.0 it should work, above its bad.
+For us, its mostly around 0.7-0.8
+
+HOWTO: LOAD PRERECORDED VIDEO USING GSTREAMER
+- download the VideoSource_Linux_Gstreamer_File.cc from http://ewokrampage.wordpress.com/video-sources/
+- in the makefile, change the videosource to that file, and add `pkg-config --cflags glib-2.0` `pkg-config --cflags gstreamer-app-0.10` to compileflags, and
+`pkg-config --libs glib-2.0` `pkg-config --libs gstreamer-app-0.10` to linksflags
+- download all missing packages in order to successfully compile. For me, it was "libgstreamer-0.10-dev", "libgstreamer-plugins-base0.10-dev"
+- in VideoSource.h, add the declaration of  ~VideoSource();

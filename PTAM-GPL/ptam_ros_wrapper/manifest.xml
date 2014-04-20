@@ -1,0 +1,23 @@
+<package>
+  <description brief="ptam_ros_wrapper">
+
+     ptam_ros_wrapper
+
+  </description>
+  <author>Möller Andreas</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ptam_ros_wrapper</url>
+  <depend package="std_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="image_transport"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="message_filters"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  
+
+</package>
+
+
