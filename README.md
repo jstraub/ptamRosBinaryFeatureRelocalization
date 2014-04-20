@@ -44,14 +44,28 @@ Compiling PTAM-GPL with ROS Integration
 ---------------------------------------
 
 - export NAVVIS_WORKSPACE=/path/to/parent/folder/ to point to the parent folder of ptamBriefRelocalizeStandalone and 3rdparty
-- Compile the roswrapper: cd PTAM; ./makeRos.sh; cd ../
-- Compile PTAM itself: cd PTAM/build; cmake ..; make install; cd ../../;
+- Compile the roswrapper: 
+  ```
+  cd PTAM; 
+  ./makeRos.sh; 
+  cd ../
+  ```
+- Compile PTAM itself: 
+  ```
+  cd PTAM/build; 
+  cmake ..; 
+  make install; 
+  cd ../../;
+  ```
 - see ./CompilationNotes.txt for more information about compiling PTAM
 
 Running PTAM-GPL with Binary Feature Relocalization
 ---------------------------------------------------
 
-- export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$NAVVIS_WORKSPACE/3rdparty/libcvd:$NAVVIS_WORKSPACE/3rdparty/gvars3
+- set the LD_LIBRARY_PATH
+  ```
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$NAVVIS_WORKSPACE/3rdparty/libcvd:$NAVVIS_WORKSPACE/3rdparty/gvars3
+  ```
 - use the script ./launchROS_PTAM.sh to run PTAM with relocalization on a rosbag (see ./launchROS_PTAM.sh -h for all options)
 - PTAM-GPL-ROS listens to ros topic 'camera/image_raw'
 
